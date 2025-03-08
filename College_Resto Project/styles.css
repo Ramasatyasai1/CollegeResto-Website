@@ -1,0 +1,125 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/Background2.png);
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: orange;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.links li {
+    font-size: 18px;
+}
+
+.links a {
+    text-decoration: none;
+    color: orange;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.left {
+    max-width: 400px;
+}
+
+.order-btn {
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Content Sections */
+#content-sections {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    display: none;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.section h2 {
+    font-size: 24px;
+    color: orange;
+}
+
+.section p {
+    font-size: 18px;
+}
+
+.close-btn {
+    padding: 10px;
+    background: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Background Blur */
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
